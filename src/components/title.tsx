@@ -4,11 +4,14 @@ const Title: React.FC = () => {
   return (
     <>
       <h1 className="text-4xl font-extrabold text-center mt-10">
-        Lorem ipsum, Dolor Sit Amet
+        Desenvolvedor Full Stack Javascript
       </h1>
-      <h3 className="text-xl font-bold text-center mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-      </h3>
+      <div className="flex justify-center">
+        <h3 className="text-xl font-serif text-center mt-5 w-10/12">
+          Sou um desenvolvedor apaixonado pelo que faço, quer me conhecer? Fique
+          à vontade para navegar pelo site.
+        </h3>
+      </div>
       <div className="flex justify-center mt-10">
         <img
           src={mfAvatar}

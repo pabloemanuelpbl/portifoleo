@@ -1,48 +1,18 @@
 import { Github, Link } from "lucide-react";
-import mfavatar from "../assets/mf-avatar.svg";
 
-const Projects: React.FC = () => {
-  const projects = [
-    {
-      title: "Project 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec nec nunc nec libero.",
-      image: mfavatar,
-    },
-    {
-      title: "Project 2",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec nec nunc nec libero.".repeat(
-          6
-        ),
-      image: mfavatar,
-    },
-    {
-      title: "Project 3",
-      description: "Description for project 3",
-      image: mfavatar,
-    },
-    {
-      title: "Project 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec nec nunc nec libero.",
-      image: mfavatar,
-    },
-    {
-      title: "Project 2",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec nec nunc nec libero.".repeat(
-          6
-        ),
-      image: mfavatar,
-    },
-    {
-      title: "Project 3",
-      description: "Description for project 3",
-      image: mfavatar,
-    },
-  ];
+export interface ProjectInterface {
+  title: string;
+  description: string;
+  image: string;
+  github?: string;
+  link?: string;
+}
 
+export interface ProjectsPropsInterface {
+  projects: ProjectInterface[];
+}
+
+const Projects: React.FC<ProjectsPropsInterface> = ({ projects }) => {
   return (
     <>
       <h2 className="text-center font-bold text-4xl text-emerald-800 m-10">
@@ -68,16 +38,25 @@ const Projects: React.FC = () => {
                 <h3 className="font-medium text-xl mb-2">{project.title}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
               </div>
-              <div className="flex gap-3 mt-2">
-                <Link className="cursor-pointer" />
-                <Github className="cursor-pointer" />
-              </div>
+                <div className="flex gap-3 mt-2">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="cursor-pointer" />
+                  </a>
+                )}
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <Link className="cursor-pointer" />
+                  </a>
+                )}
+                </div>
             </div>
           ))}
         </div>
       </div>
+      <div className="h-40"></div>
     </>
   );
 };
 
-export default Projects;
+export { Projects };

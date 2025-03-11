@@ -1,3 +1,5 @@
+import Timeline from "./timeline";
+
 const technologies: { name: string; image: string }[] = [
   { name: "Javascript", image: "/public/javascript.svg" },
   { name: "Typescript", image: "/public/typescript.svg" },
@@ -17,39 +19,36 @@ const technologies: { name: string; image: string }[] = [
   { name: "Linux", image: "/public/linux.svg" },
 ];
 
+const events = [
+  { title: "Senai", description: "Lógica de programacao e LGPD" },
+  { title: "DIO", description: "Full Stack Javascript" },
+  { title: "Univesp", description: "Superior em Engenharia da Computação" },
+  { title: "Compass UOL", description: "Estágio Backend" },
+  { title: "Lançamento", description: "Entrega do projeto ao público." },
+];
+
 const About: React.FC = () => {
   return (
     <>
       <h2 className="text-center font-bold text-4xl text-emerald-800 m-10">
         SOBRE MIN
       </h2>
+      <h3 className="text-center text-5xl font-light mb-4 text-emerald-800">
+        Me chamo <strong>Pablo Emanuel</strong>
+      </h3>
       <div className="flex justify-center">
-        <p className="w-8/12">
-          Desde muito cedo meu interesse por computadores vinha a tona, sempre
-          busquei conhecimento nesta área com bastante entusiasmo mesmo não
-          tendo computador e apenas um celular.
+        <p className="w-72 text-right font-mono">
+          estudo sobre tecnologia á alguns anos e sou apaixonado pelo que faço. 
           <br />
           <br />
-          De início eu era focado em adquirir conhecimento na área do Hacking
-          (que me proporcionou uma base de criptografia, redes,
-          vulnerabilidades, protocolos TCP entre outros) e no uso de sistema
-          Linux, após alguns anos decidi migrar para a área da programação,
-          iniciei com Python mais me desenvolvi de verdade com a linguajem
-          Javascript como Full Stack.
+          Atualmente tenho conhecimento a respeito de desenvolvimento Front End, Back End e Infra estrutura.
+          Ja realizei varios cursos, participei de Bootcamps e também já fiz estagio na área.
           <br />
           <br />
-          De repente surgiu uma oportunidade de trabalhar com design gráfico, o
-          que me proporcionou experiencia nesta área.
-          <br />
-          <br />
-          Ando constantemente buscando conhecimento com a meta de me aperfeiçoar
-          e poder me tornar um bom profissional, Tenho facilidade de aprender e
-          tenho alegria ao poder ensinar ou ajudar.
-          <br />
-          <br />
-          Se tiver interesse em me conhecer melhor pode entrar em contato, será
-          um prazer conhecê-lo(a).
+          Estou atualmente cursando Faculdade de Engenharia da cumputação na <strong>Univesp</strong>, e além disso possuo conhecimento de computação em núvem na <strong>AWS</strong>, minha atual certificação é a <strong>Cloud Practitioner</strong>, e estou em busca de outras.
         </p>
+
+        <Timeline events={events} />
       </div>
 
       <div className="flex justify-center">
@@ -61,7 +60,7 @@ const About: React.FC = () => {
             >
               <img
                 src={tech.image}
-                alt="JavaScript Logo"
+                alt="logo da tecnologia"
                 className="inline-block w-6 h-6 mr-2"
               />
               {tech.name}

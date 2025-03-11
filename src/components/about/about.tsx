@@ -3,7 +3,7 @@ import Timeline from "./timeline";
 const technologies: { name: string; image: string }[] = [
   { name: "Javascript", image: "/public/javascript.svg" },
   { name: "Typescript", image: "/public/typescript.svg" },
-  { name: "Tailind", image: "/public/tailwind.svg" },
+  { name: "Taiwlind", image: "/public/tailwind.svg" },
   { name: "Styled Components", image: "/public/styled-components.svg" },
   { name: "Mongoose", image: "/public/mongoose.svg" },
   { name: "Knex", image: "/public/knex.svg" },

@@ -1,14 +1,18 @@
 import { Linkedin, Mail } from "lucide-react";
+import React from "react";
 
 const Contact: React.FC = () => {
-  const CardLink: React.FC<{ href: string; children: React.ReactNode }> = ({
-    href,
-    children,
-  }) => {
+  const CardLink: React.FC<
+    {
+      href: string;
+      children: React.ReactNode;
+    } & React.HTMLProps<HTMLAnchorElement>
+  > = ({ href, children, ...props }) => {
     return (
       <a
         href={href}
         className="p-4 m-2 border rounded-lg shadow-lg flex items-center justify-center"
+        {...props}
       >
         {children}
       </a>
@@ -22,10 +26,13 @@ const Contact: React.FC = () => {
       </h2>
 
       <div className="flex justify-center">
-        <CardLink href="">
+        <CardLink
+          href="https://www.linkedin.com/in/pablo-emanuel-3a66a41b0/"
+          target="_blank"
+        >
           <Linkedin />
         </CardLink>
-        <CardLink href="">
+        <CardLink href="mailto:pablo.fju.pe@gmail.com">
           <Mail />
         </CardLink>
       </div>

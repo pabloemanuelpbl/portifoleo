@@ -1,8 +1,9 @@
 import About from "./components/about"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
-import Projects from "./components/projects"
+import { Projects } from "./components/projects"
 import Title from "./components/title"
+import myProjects from "./user/projects"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <>
       <Title />
       <About />
-      <Projects />
+      <Projects projects={myProjects}/>
       <Contact />
       <Footer />
     </>

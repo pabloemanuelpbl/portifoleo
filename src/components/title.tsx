@@ -1,4 +1,4 @@
-import mfAvatar from "../assets/mf-avatar.svg";
+import devPicture from "../assets/devpicture.jpeg";
 
 const Title: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Title: React.FC = () => {
       </div>
       <div className="flex justify-center mt-10">
         <img
-          src={mfAvatar}
+          src={devPicture}
           alt="Round SVG"
           className="w-40 h-40 rounded-full"
         />

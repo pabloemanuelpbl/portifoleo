@@ -1,22 +1,39 @@
+import javascriptSVG from "../../assets/technologies/javascript.svg";
+import typescriptSVG from "../../assets/technologies/typescript.svg";
+import tailwindSVG from "../../assets/technologies/tailwind.svg";
+import styledComponentsSVG from "../../assets/technologies/styled-components.svg";
+import mongooseSVG from "../../assets/technologies/mongoose.svg";
+import knexSVG from "../../assets/technologies/knex.svg";
+import nodejsSVG from "../../assets/technologies/nodejs.svg";
+import reactSVG from "../../assets/technologies/react.svg";
+import nextjsSVG from "../../assets/technologies/nextjs.svg";
+import nestjsSVG from "../../assets/technologies/nestjs.svg";
+import expressSVG from "../../assets/technologies/express.svg";
+import typeormSVG from "../../assets/technologies/typeorm.svg";
+import terraformSVG from "../../assets/technologies/terraform.svg";
+import dockerSVG from "../../assets/technologies/docker.svg";
+import mysqlSVG from "../../assets/technologies/mysql.svg";
+import linuxSVG from "../../assets/technologies/linux.svg";
+
 import Timeline from "./timeline";
 
 const technologies: { name: string; image: string }[] = [
-  { name: "Javascript", image: "/public/javascript.svg" },
-  { name: "Typescript", image: "/public/typescript.svg" },
-  { name: "Tailind", image: "/public/tailwind.svg" },
-  { name: "Styled Components", image: "/public/styled-components.svg" },
-  { name: "Mongoose", image: "/public/mongoose.svg" },
-  { name: "Knex", image: "/public/knex.svg" },
-  { name: "NodeJS", image: "/public/nodejs.svg" },
-  { name: "React", image: "/public/react.svg" },
-  { name: "NextJS", image: "/public/nextjs.svg" },
-  { name: "NestJS", image: "/public/nestjs.svg" },
-  { name: "Express", image: "/public/express.svg" },
-  { name: "TypeORM", image: "/public/typeorm.svg" },
-  { name: "Terraform", image: "/public/terraform.svg" },
-  { name: "Docker", image: "/public/docker.svg" },
-  { name: "Mysql", image: "/public/mysql.svg" },
-  { name: "Linux", image: "/public/linux.svg" },
+  { name: "Javascript", image: javascriptSVG },
+  { name: "Typescript", image: typescriptSVG },
+  { name: "Taiwlind", image: tailwindSVG },
+  { name: "Styled Components", image: styledComponentsSVG },
+  { name: "Mongoose", image: mongooseSVG },
+  { name: "Knex", image: knexSVG},
+  { name: "NodeJS", image: nodejsSVG },
+  { name: "React", image: reactSVG },
+  { name: "NextJS", image: nextjsSVG },
+  { name: "NestJS", image: nestjsSVG },
+  { name: "Express", image: expressSVG },
+  { name: "TypeORM", image: typeormSVG },
+  { name: "Terraform", image: terraformSVG },
+  { name: "Docker", image: dockerSVG },
+  { name: "Mysql", image: mysqlSVG },
+  { name: "Linux", image: linuxSVG },
 ];
 
 const events = [

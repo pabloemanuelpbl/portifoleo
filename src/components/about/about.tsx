@@ -1,3 +1,5 @@
+import Timeline from "./timeline";
+
 import javascriptSVG from "../../assets/technologies/javascript.svg";
 import typescriptSVG from "../../assets/technologies/typescript.svg";
 import tailwindSVG from "../../assets/technologies/tailwind.svg";
@@ -15,7 +17,6 @@ import dockerSVG from "../../assets/technologies/docker.svg";
 import mysqlSVG from "../../assets/technologies/mysql.svg";
 import linuxSVG from "../../assets/technologies/linux.svg";
 
-import Timeline from "./timeline";
 
 const technologies: { name: string; image: string }[] = [
   { name: "Javascript", image: javascriptSVG },
@@ -36,12 +37,12 @@ const technologies: { name: string; image: string }[] = [
   { name: "Linux", image: linuxSVG },
 ];
 
-const events = [
+const timeLineEvents = [
   { title: "Senai", description: "Lógica de programacao e LGPD" },
   { title: "DIO", description: "Full Stack Javascript" },
   { title: "Univesp", description: "Superior em Engenharia da Computação" },
   { title: "Compass UOL", description: "Estágio Backend" },
-  { title: "Lançamento", description: "Entrega do projeto ao público." },
+  { title: "AWS", description: "Cloud Practitioner" },
 ];
 
 const About: React.FC = () => {
@@ -65,7 +66,7 @@ const About: React.FC = () => {
           Estou atualmente cursando Faculdade de Engenharia da cumputação na <strong>Univesp</strong>, e além disso possuo conhecimento de computação em núvem na <strong>AWS</strong>, minha atual certificação é a <strong>Cloud Practitioner</strong>, e estou em busca de outras.
         </p>
 
-        <Timeline events={events} />
+        <Timeline events={timeLineEvents} />
       </div>
 
       <div className="flex justify-center">
